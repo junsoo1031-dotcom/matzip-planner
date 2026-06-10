@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나만의 맛집 리스트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>🍴 나만의 맛집 리스트</h1>
+<p id="today"></p>
+
+<div class="input-area">
+<input type="text" id="restaurantInput" placeholder="맛집 이름 입력">
+<button onclick="addRestaurant()">추가</button>
+</div>
+
+<ul id="restaurantList"></ul>
+
+<h2>오늘의 추천 맛집</h2>
+<button onclick="recommendRestaurant()">추천받기</button>
+<p id="recommend"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
