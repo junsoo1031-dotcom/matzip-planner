@@ -1,28 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>나만의 맛집 리스트</title>
+<title>맛집 플래너 포트폴리오</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-<h1>🍴 나만의 맛집 리스트</h1>
-<p id="today"></p>
 
-<div class="input-area">
-<input type="text" id="restaurantInput" placeholder="맛집 이름 입력">
-<button onclick="addRestaurant()">추가</button>
+<header>
+<h1>🍽️ 맛집 플래너</h1>
+<p>웹프로그래밍 과제 제출용 포트폴리오 사이트</p>
+<nav>
+<a href="#intro">소개</a>
+<a href="#planner">맛집관리</a>
+<a href="#about">제작자</a>
+</nav>
+</header>
+
+<section id="intro" class="hero">
+<h2>나만의 맛집 관리 웹사이트</h2>
+<p>HTML, CSS, JavaScript를 활용한 동적 웹사이트</p>
+</section>
+
+<section id="planner" class="container">
+
+<div class="card">
+<h3>📅 오늘 날짜</h3>
+<p id="today"></p>
 </div>
 
-<ul id="restaurantList"></ul>
+<div class="card">
+<h3>➕ 맛집 등록</h3>
+<input type="text" id="name" placeholder="맛집 이름">
+<select id="region">
+<option>서울</option>
+<option>인천</option>
+<option>경기</option>
+<option>부산</option>
+</select>
 
-<h2>오늘의 추천 맛집</h2>
+<select id="rating">
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+
+<input type="date" id="visitDate">
+<input type="file" id="photo">
+
+<button onclick="addRestaurant()">등록하기</button>
+</div>
+
+<div class="card">
+<h3>🔍 검색</h3>
+<input type="text" id="search" placeholder="맛집 검색" onkeyup="searchRestaurant()">
+</div>
+
+<div class="card">
+<h3>🎲 랜덤 추천</h3>
 <button onclick="recommendRestaurant()">추천받기</button>
 <p id="recommend"></p>
 </div>
 
+<div class="card full">
+<h3>📋 맛집 목록</h3>
+<ul id="restaurantList"></ul>
+</div>
+
+</section>
+
+<section id="about" class="about">
+<h2>👨‍💻 제작자 소개</h2>
+<p>컴퓨터공학과 홍준수</p>
+<p>HTML, CSS, JavaScript 학습을 위해 제작한 프로젝트입니다.</p>
+</section>
+
+<footer>
+<p>© 2026 홍준수 | Github Pages 배포 프로젝트</p>
+</footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>

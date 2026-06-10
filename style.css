@@ -1,27 +1,56 @@
-body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-margin:0;
-padding:0;
-}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f5f7fa}
+header{background:#1f2937;color:white;text-align:center;padding:30px}
+nav a{color:white;text-decoration:none;margin:0 15px}
+.hero{padding:60px;text-align:center;background:white}
 .container{
-max-width:800px;
-margin:40px auto;
-background:white;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
 padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-text-align:center;
 }
-input{
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+.full{grid-column:1/-1}
+input,select,button{
+width:100%;
 padding:10px;
-width:250px;
+margin-top:10px;
 }
 button{
-padding:10px 15px;
-margin-left:5px;
+background:#2563eb;
+color:white;
+border:none;
+cursor:pointer;
+}
+button:hover{
+opacity:.9;
 }
 li{
-margin:10px;
 list-style:none;
+background:#eef2ff;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+}
+img.preview{
+width:120px;
+margin-top:10px;
+border-radius:10px;
+}
+.about{
+background:white;
+padding:50px;
+text-align:center;
+}
+footer{
+background:#1f2937;
+color:white;
+text-align:center;
+padding:20px;
 }
